@@ -4,17 +4,22 @@ import java.util.Arrays;
 
 public class Test {
     public static void main(String[] args) {
-        String carBrands[] = new String[5];
-        carBrands[0] = "Ferrari";
-        carBrands[1] = "Audi";
-        carBrands[2] = "BMW";
-        carBrands[3] = "Jeep";
-        carBrands[4] = "Fiat";
+        String aliceToDos[] = new String[]{"Coding", "Reading", "Learning"};
+        String bobToDos[] = new String[]{"Reading", "Coding", "Learning", "Sleeping"};
+        String timToDos[] = new String[]{"Reading", "Learning", "Coding"};
 
-        System.out.println("The length of the list is: " + carBrands.length);
-        System.out.println("The 3rd item is " + carBrands[2]);
+        System.out.println("Is Alice's array equal to Bob array? " + Arrays.equals(aliceToDos, bobToDos));
+        System.out.println("Is Alice's array equal to Tim array? " + Arrays.equals(aliceToDos, timToDos));
+        System.out.println("Is Alice's array having the same length of Bob's array? " + (aliceToDos.length == bobToDos.length));
+        System.out.println("Is Alice's array having the same length of Tim's array? " + (aliceToDos.length == timToDos.length));
 
-        int primeNumber[] = new int[]{2,3,5,7,11,13};
-        System.out.println(Arrays.toString(primeNumber));
+        Arrays.sort(aliceToDos);
+        Arrays.sort(bobToDos);
+        Arrays.sort(timToDos);
+
+        System.out.println("Is Alice having the same tasks of Bob? " + Arrays.equals(aliceToDos, bobToDos));
+        System.out.println("Is Alice having the same tasks of Tim? " + Arrays.equals(aliceToDos, timToDos));
+
+
     }
 }
